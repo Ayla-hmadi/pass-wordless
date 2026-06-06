@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "pass-wordless",
+    "slug": "pass-wordless",
+    "scheme": "pass-wordless",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.passwordless.app",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "pass-wordless uses Face ID to protect your saved passwords."
+      }
+    },
+    "android": {
+      "package": "com.passwordless.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0B0F"
+      },
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "pass-wordless uses Face ID to protect your saved passwords."
+        }
+      ],
+      "expo-secure-store",
+      "expo-sqlite"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "717b8a23-6ea4-44cd-81e4-19acda6269a9"
+      }
+    }
+  }
+}
